@@ -1,3 +1,5 @@
+'use strict'
+
 export const ReduxBegan = ({dispatch, getState}) => next => action => {
   if (action && action.state !== States.Padding) {
     dispatch({type:action.type, state:States.Padding})
